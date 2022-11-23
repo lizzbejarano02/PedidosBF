@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col s12 l4 offset-l4">
+      <div class="card">
+        <div class="card-action center-align red lighten-2 white-text">
+          <h3>Ingreso de usuarios</h3>
+        </div>
+        <form [formGroup]="fgValidador" (ngSubmit)="IdentificarUsuario()">
+        <div class="row">
+            <div class="input-field col s12">
+            <i class="material-icons prefix">email</i> 
+            <input formControlName="usuario"  id="email" type="text" class="validate">
+            <label class="active" for="email">E-mail</label>
+          </div>
+          </div>
+          <div class="row">
+            <div class="input-field col s12">
+                <i class="material-icons prefix">lock</i> 
+            <input formControlName="clave" id="password" type="password" class="validate">
+            <label class="active" for="password">Contraseña</label>
+          </div>
+          </div>
+          <div class="row center-align">
+            <button [disabled]="!fgValidador.valid" class="btn waves-effect green"  type="submit" name="action">Entrar
+                <i class="material-icons right">send</i>
+            </button>
+          </div>
+          <br>
+        </form>
+        </div>  
+        </div>   
+  </div>
+
+
+  
